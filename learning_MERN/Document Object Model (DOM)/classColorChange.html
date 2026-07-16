@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example</title>
+</head>
+<body>
+
+    <h1>Welcome to The DOM Class</h1>
+
+    <script>
+        let heading = document.getElementsByTagName("h1")[0];
+        console.dir(heading);
+
+        // Change the color and text after 5 seconds
+        setTimeout(() => {
+            heading.style.color = "blue";
+            heading.innerText = "Welcome to The DOM Class - Blue Color";
+        }, 1000); 
+
+        
+
+    </script>
+
+</body>
+</html>

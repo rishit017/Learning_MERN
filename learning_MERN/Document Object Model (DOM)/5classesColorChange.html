@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+
+    <style>
+        .class1 {
+            color: red;
+        }
+
+        .class2 {
+            color: blue;
+        }
+
+        .class3 {
+            color: green;
+        }
+
+        .class4 {
+            color: yellow;
+        }
+
+        .class5 {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="class1">Color Changer - 1</h1>
+    <h1 class="class2">Color Changer - 2</h1>
+    <h1 class="class3">Color Changer - 3</h1>
+    <h1 class="class4">Color Changer - 4</h1>
+    <h1 class="class5">Color Changer - 5</h1>
+
+    <script>
+        const colors = [
+            "red",
+            "blue",
+            "green",
+            "yellow",
+            "orange",
+            "pink",
+            "purple",
+            "brown",
+            "cyan"
+        ];
+
+        setInterval(() => {
+
+            let headings = document.querySelectorAll("h1");
+
+            headings.forEach((heading) => {
+
+                let randomIndex = Math.floor(Math.random() * colors.length);
+                heading.style.color = colors[randomIndex];
+
+            });
+
+        }, 1000);
+    </script>
+
+</body>
+</html>

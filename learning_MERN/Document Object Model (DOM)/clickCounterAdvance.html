@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Click Counter</title>
+
+<style>
+    body{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        margin:0;
+    }
+
+    .container{
+        width:250px;
+    }
+    
+    .counter{
+        height:150px;
+        background:rgb(118, 214, 135);
+        color:white;
+        font-size:50px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        border: 2px solid black;
+        border-radius: 20px;
+    }
+    
+    button{
+        margin-top: 10px;
+        width:100%;
+        height:45px;
+        background-color: rgb(0, 141, 9);
+        font-size:18px;
+        cursor:pointer;
+        border-radius: 10px;
+    }
+    
+    .btns{
+        display: flex;
+        gap: 10px;
+    }
+
+    .btns button{
+        width: 50%;
+    }
+    
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="counter" id="count">0</div>
+
+    <div class="btns">
+        <button onclick="increase()">Increase</button>
+        <button onclick="decrease()">Decrease</button>
+    </div>
+
+    <button onclick="resetCounter()">Reset</button>
+</div>
+
+<script>
+    let count = 0;
+
+    function increase() {
+        count++;
+        document.getElementById("count").innerHTML = count;
+    }
+    function decrease() {
+        if (count > 0) {
+            count--;
+        }
+        document.getElementById("count").innerHTML = count;
+    }
+    function resetCounter() {
+        count = 0;
+        document.getElementById("count").innerHTML = count;
+    }
+</script>
+
+</body>
+</html>
