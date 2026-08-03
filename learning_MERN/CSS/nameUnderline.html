@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1{
+            font-family: "SF Pro Text", sans-serif;
+            position: relative;
+            display: inline-block;
+            font-size: 50px;
+        }
+
+        h1::after{
+            
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0px; /* Distance below the text */
+            width: 2%;
+            height: 3px;
+            background-color: red;
+            transition: width 0.5s cubic-bezier(0,.45,.43,.99);
+        }
+
+        h1:hover::after{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rishit</h1>
+</body>
+</html>

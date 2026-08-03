@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drawing Board</title>
+
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #1e1e24;
+      color:whitesmoke;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #controls{
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    button{
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color:crimson;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover{
+      background-color: rgb(161, 15, 44);
+    }
+
+    canvas{
+      border: 3px solid white;
+      background-color: #ffffff;
+      border-radius: 8px;
+      cursor: crosshair;
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <button id="clearBtn">Clear Board</button>
+    <p>Tip: Double click for bg color change | Right Click to change brush color</p>
+  </div>
+
+  <canvas id="paintCanvas" width="800" height="500"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
