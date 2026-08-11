@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Promises.race()
+        const p1 = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("pizza 1");
+            }, 1000);
+        });
+
+        const p2 = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("pizza 2");
+            }, 3000);
+        });
+
+        Promise.race([p1, p2])
+            .then((result) => {
+                console.log(result);
+            });
+
+    </script>
+</body>
+</html>

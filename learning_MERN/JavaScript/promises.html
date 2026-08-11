@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const promise = new Promise((resolve, reject) => {
+
+            let pizzaDelivered = true;
+            if (pizzaDelivered) {
+                resolve("pizza is delivered now!");
+            } 
+            else {
+                reject("not delivered");
+            }
+        })
+        .then((message) => {
+            console.log(message);
+        })
+        .catch((error) => {
+                console.log(error);
+        });
+
+
+
+
+        //using promise all  -   gives output of all at once
+        const p1 = "html";
+        const p2 = "node";
+        const p3 = "react";
+        
+        Promise.all([p1, p2, p3])
+        .then((result) => {
+            console.log(result);
+        });
+        
+
+
+
+        //Promise.all works only when all are either resolve or reject
+        const p4 = Promise.resolve("html");
+        const p5 = Promise.reject("Server Error");
+        const p6 = Promise.resolve("react");
+        
+        Promise.all([p4, p5, p6])
+        .then((result) => {
+            console.log(result);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+
+    </script>
+</body>
+</html>
