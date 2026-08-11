@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Promise.any()
+
+        // 1. Returns the first Promise that gets RESOLVED.
+        // 2. Ignores rejected Promises.
+        // 3. If at least ONE Promise is resolved, it returns that value.
+
+        const p1 = Promise.reject("server 1");
+        const p2 = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("server 2");
+            }, 2000);
+        });
+
+        const p3 = Promise.reject("server 3");
+
+        Promise.any([p1, p2, p3])
+            .then((result) => {
+                console.log(result);
+            });
+            
+    </script>
+</body>
+</html>
