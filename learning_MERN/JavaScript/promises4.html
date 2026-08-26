@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // promise.allSettled
+        const p1 = Promise.resolve("Rishit");
+        const p2 = Promise.resolve("Rishita");
+        const p3 = Promise.resolve("Rishi");
+
+        Promise.allSettled([p1, p2, p3])
+            .then((result) => {
+                console.log(result);
+            });
+
+    </script>
+</body>
+</html>
