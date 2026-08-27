@@ -4,3 +4,10 @@ async function getUsers() {
     console.log(data);
 }
 getUsers();
+
+async function Users(){
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts",{
+        method: "POST",
+
+    })
+}
